@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoboToyApp", "RoboToy\RoboT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboToyApp.nUnitTests", "RoboToyApp.nUnitTests\RoboToyApp.nUnitTests.csproj", "{8674C44A-C49C-4110-A1B2-052C3063C7CE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme Files", "Readme Files", "{8C552D2D-4A4D-401B-A235-4FF9E8F7BF35}"
+	ProjectSection(SolutionItems) = preProject
+		ProblemStatement.md = ProblemStatement.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
