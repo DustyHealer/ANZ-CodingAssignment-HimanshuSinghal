@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoboToyApp", "RoboToy\RoboToyApp.csproj", "{9EBF7E8A-61DE-4DB2-B94F-0748A4EB8715}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboToyApp.nUnitTests", "RoboToyApp.nUnitTests\RoboToyApp.nUnitTests.csproj", "{8674C44A-C49C-4110-A1B2-052C3063C7CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EBF7E8A-61DE-4DB2-B94F-0748A4EB8715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EBF7E8A-61DE-4DB2-B94F-0748A4EB8715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EBF7E8A-61DE-4DB2-B94F-0748A4EB8715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EBF7E8A-61DE-4DB2-B94F-0748A4EB8715}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8674C44A-C49C-4110-A1B2-052C3063C7CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8674C44A-C49C-4110-A1B2-052C3063C7CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8674C44A-C49C-4110-A1B2-052C3063C7CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8674C44A-C49C-4110-A1B2-052C3063C7CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81FD2178-E0AA-4D11-9F7E-0908878315C9}
+	EndGlobalSection
+EndGlobal
