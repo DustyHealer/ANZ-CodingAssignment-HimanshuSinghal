@@ -3,7 +3,7 @@ Go to the folder on your local machine where you want to copy the code and execu
 >> git clone https://github.com/DustyHealer/ANZ-CodingAssignment-HimanshuSinghal.git
 
 # How to run the RoboToy app?
-1. After cloning the app in your local folder. Go to the root folder.
+1. After cloning the app in your local folder. Inside the root folder, please navigate to the Executable Folder.
 2. Double click on the RoboToyApp.exe file to run the app.
 3. The console will open with the below instructions:
 
