@@ -66,7 +66,14 @@ namespace RoboToy
 
                             int x = int.Parse(parts[0].Trim());
                             int y = int.Parse(parts[1].Trim());
-                            ToyController.Direction facing = (ToyController.Direction)Enum.Parse(typeof(ToyController.Direction), parts[2].Trim());
+
+                            var validDirections = new List<string>() { "NORTH", "EAST", "SOUTH", "WEST" };
+                            ToyController.Direction facing;
+                            if (!Enum.TryParse<ToyController.Direction>(parts[2].Trim(), out facing) || !validDirections.Contains(parts[2].Trim()))
+                            {
+                                Console.WriteLine("Invalid command format. Try again.");
+                                continue;
+                            }
                             robot.Place(x, y, facing);
                             break;
                         case "MOVE":
