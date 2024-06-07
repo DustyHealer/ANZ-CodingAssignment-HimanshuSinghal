@@ -69,7 +69,7 @@ namespace RoboToy
 
                             var validDirections = new List<string>() { "NORTH", "EAST", "SOUTH", "WEST" };
                             ToyController.Direction facing;
-                            if (!Enum.TryParse<ToyController.Direction>(parts[2].Trim(), out facing) || !validDirections.Contains(parts[2].Trim()))
+                            if (!validDirections.Contains(parts[2].Trim()) || !Enum.TryParse<ToyController.Direction>(parts[2].Trim(), out facing))
                             {
                                 Console.WriteLine("Invalid command format. Try again.");
                                 continue;
