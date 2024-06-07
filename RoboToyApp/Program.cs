@@ -1,6 +1,6 @@
-﻿using RoboToy.Controller;
+﻿using RoboToyApp.Controller;
 
-namespace RoboToy
+namespace RoboToyApp
 {
     internal class Program
     {
@@ -8,6 +8,7 @@ namespace RoboToy
         {
             try
             {
+                // Welcome message with instructions on starting the console
                 Console.WriteLine("=======================================");
                 Console.WriteLine("       Welcome to Toy Robot Simulator  ");
                 Console.WriteLine("=======================================");
@@ -26,12 +27,16 @@ namespace RoboToy
                 Console.WriteLine("Type your commands below. Type 'Exit' to close the application.");
                 Console.WriteLine("=======================================");
                 Console.WriteLine();
-                var robot = new ToyController();
+
+                // Create an object of toy controller
+                IToyController robot = new ToyController();
 
                 while (true)
                 {
+                    // Read the input from the user
                     string line = Console.ReadLine();
 
+                    // Check for the empty input from user
                     if (string.IsNullOrEmpty(line))
                     {
                         Console.WriteLine("Invalid command. Try Again.");
@@ -42,6 +47,7 @@ namespace RoboToy
                     string[] input = line.Split(' ');
                     string command = input[0].Trim();
 
+                    // Exit the console if user gives 'exit' command
                     if (!string.IsNullOrEmpty(command) && command.Equals("EXIT"))
                     {
                         Console.WriteLine("Exiting Application...");
@@ -51,6 +57,7 @@ namespace RoboToy
                     switch (command)
                     {
                         case "PLACE":
+                            // Check if parameters are passed to place command
                             if (string.IsNullOrEmpty(input[1]))
                             {
                                 Console.WriteLine("Invalid command format. Try again.");
@@ -58,6 +65,8 @@ namespace RoboToy
                             }
 
                             string[] parts = input[1].Trim().Split(',');
+
+                            // Check if all three parameters are passed to place command
                             if (parts.Length != 3)
                             {
                                 Console.WriteLine("Invalid command format. Try again.");
@@ -66,29 +75,29 @@ namespace RoboToy
 
                             int x = int.Parse(parts[0].Trim());
                             int y = int.Parse(parts[1].Trim());
-
-                            var validDirections = new List<string>() { "NORTH", "EAST", "SOUTH", "WEST" };
-                            ToyController.Direction facing;
-                            if (!validDirections.Contains(parts[2].Trim()) || !Enum.TryParse<ToyController.Direction>(parts[2].Trim(), out facing))
-                            {
-                                Console.WriteLine("Invalid command format. Try again.");
-                                continue;
-                            }
+                            string facing = parts[2].Trim();
+                            
+                            // Place the robot
                             robot.Place(x, y, facing);
                             break;
                         case "MOVE":
+                            // Move the robot
                             robot.Move();
                             break;
                         case "LEFT":
+                            // Rotate the robot to left
                             robot.Left();
                             break;
                         case "RIGHT":
+                            // Rotate the robot to right
                             robot.Right();
                             break;
                         case "REPORT":
+                            // Report the present coordinates and direction to console
                             Console.WriteLine(robot.Report());
                             break;
                         default:
+                            // Invalid input command
                             Console.WriteLine("Invalid command. Try again.");
                             continue;
                     }
@@ -96,6 +105,7 @@ namespace RoboToy
             }
             catch (Exception e)
             {
+                // Log the exception to the console before exiting
                 Console.WriteLine($"Exception Occurred: {e.Message}, Exiting...");
             }
         }

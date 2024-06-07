@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="RoboToyApp.deps.json" />
+    <None Remove="RoboToyApp.dll" />
+    <None Remove="RoboToyApp.exe" />
+    <None Remove="RoboToyApp.pdb" />
+    <None Remove="RoboToyApp.runtimeconfig.json" />
+  </ItemGroup>
+
 </Project>

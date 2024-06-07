@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RoboToy\RoboToyApp.csproj" />
+    <ProjectReference Include="..\RoboToyApp\RoboToyApp.csproj" />
   </ItemGroup>
 
   <ItemGroup>
