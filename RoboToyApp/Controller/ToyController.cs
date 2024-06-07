@@ -134,6 +134,7 @@
         /// <returns></returns>
         private bool IsValidPosition(int x, int y)
         {
+            // Robot should not fall off the 5x5 board
             return x >= 0 && x <= 4 && y >= 0 && y <= 4;
         }
 
